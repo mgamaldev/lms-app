@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Casts\EmailCast;
+use App\ValueObjects\Email;
 use Illuminate\Console\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -19,6 +21,7 @@ class User extends Authenticatable
 
 
     protected $casts = [
+        'email'=> EmailCast::class,
         'email_verified_at' => 'datetime',
         'password'          => 'hashed',
     ];

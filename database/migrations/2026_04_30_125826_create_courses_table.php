@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('video')->nullable();
             $table->decimal('price', 8, 2)->default(0);
+            $table->decimal('total_hours', 8, 2);
             $table->foreignId('module_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
         });

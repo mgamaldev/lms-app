@@ -19,6 +19,7 @@ class CourseFactory extends Factory
             'video'       => fake()->boolean(60) ? 'https://www.youtube.com/watch?v=' . fake()->lexify('???????????') : null,
             'price'       => fake()->randomElement([0, 9.99, 19.99, 49.99, 99.99, 149.99, 199.99]),
             'module_id'   => Module::factory(),
+            'total_hours' => fake()->randomNumber(5)
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Casts\PriceCast;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -16,13 +17,14 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
     'video',
     'price',
     'module_id',
+    'total_hours'
 ])]
 class Course extends Model
 {
     use HasFactory;
 
     protected $casts = [
-        'price' => 'decimal:2',
+        'price' => PriceCast::class,
     ];
 
     public function module(): BelongsTo

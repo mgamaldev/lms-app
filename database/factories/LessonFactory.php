@@ -33,6 +33,7 @@ class LessonFactory extends Factory
             'description' => fake()->boolean(80) ? fake()->paragraph(2) : null,
             'video'       => fake()->boolean(85) ? 'https://www.youtube.com/watch?v=' . fake()->lexify('???????????') : null,
             'course_id'   => Course::factory(),
+            'duration'    => fake()->randomNumber()
         ];
     }
 }
