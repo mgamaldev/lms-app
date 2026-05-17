@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Enrollment;
-use App\Models\Lesson;
 use App\Models\Progress;
 use Illuminate\Database\Seeder;
 
@@ -24,11 +23,11 @@ class ProgressSeeder extends Seeder
 
                 Progress::firstOrCreate(
                     [
-                        'user_id'   => $enrollment->user_id,
+                        'user_id' => $enrollment->user_id,
                         'lesson_id' => $lesson->id,
                     ],
                     [
-                        'score'        => $score,
+                        'score' => $score,
                         'is_completed' => $score >= 50,
                     ]
                 );
