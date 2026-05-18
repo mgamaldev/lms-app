@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
     'video',
     'price',
     'module_id',
-    'total_hours'
+    'total_hours',
 ])]
 class Course extends Model
 {
